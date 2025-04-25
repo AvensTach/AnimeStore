@@ -63,13 +63,13 @@ Provide a smooth, user-friendly shopping experience for anime fans, built using 
 
 ## 🧱 5. Tech Stack
 
-| Layer          | Technology                   |
-|----------------|------------------------------|
-| Backend        | Django (Python)              |
-| Frontend       | HTML/CSS, Bootstrap or Tailwind |
-| Database       | SQLite (dev), PostgreSQL (prod optional) |
-| Hosting        | TBD |
-| Version Control| Git & GitHub                 |
+| Layer          | Technology                          |
+|----------------|-------------------------------------|
+| Backend        | Django (Python)                     |
+| Frontend       | TBD                                 |
+| Database       | ?SQLite? (?dev?), PostgreSQL (prod) |
+| Hosting        | TBD                                 |
+| Version Control| Git & GitHub                        |
 
 ---
 
