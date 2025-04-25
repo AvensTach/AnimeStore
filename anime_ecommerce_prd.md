@@ -2,7 +2,7 @@
 # 📝 Product Requirements Document (PRD)
 
 **Project Name:** Anime E-commerce Store  
-**Author:** [Your Name]  
+**Authors:** Artur Tymchuk, Dmytro Yarmoluk
 **Date:** 2025-04-25  
 **Version:** 1.0
 
@@ -68,12 +68,12 @@ Provide a smooth, user-friendly shopping experience for anime fans, built using 
 | Backend        | Django (Python)              |
 | Frontend       | HTML/CSS, Bootstrap or Tailwind |
 | Database       | SQLite (dev), PostgreSQL (prod optional) |
-| Hosting        | Heroku, Railway, or PythonAnywhere |
+| Hosting        | TBD |
 | Version Control| Git & GitHub                 |
 
 ---
 
-## 🧩 6. Data Models (Simplified)
+## 🧩 6. Data Models (Simplified so TBD)
 
 ### Product
 - Title  
@@ -123,6 +123,5 @@ Provide a smooth, user-friendly shopping experience for anime fans, built using 
 ## 📦 9. Deliverables
 
 - Source code (GitHub)  
-- Deployed app (optional)  
 - README with setup instructions  
 - Screenshots or demo video (for portfolio)
