@@ -2,7 +2,7 @@
 # 📝 Product Requirements Document (PRD)
 
 **Project Name:** Anime E-commerce Store  
-**Authors:** Artur Tymchuk, Dmytro Yarmoluk
+**Authors:** Artur Tymchuk, Dmytro Yarmoliuk
 **Date:** 2025-04-25  
 **Version:** 1.0
 
@@ -57,50 +57,81 @@ Provide a smooth, user-friendly shopping experience for anime fans, built using 
 - Payment gateway integration (Stripe/PayPal)  
 - Product search bar  
 - Wishlist functionality  
+- Creating custom products (with future print-on-demand availability)
 - Discount codes  
+
 
 ---
 
 ## 🧱 5. Tech Stack
 
-| Layer          | Technology                          |
-|----------------|-------------------------------------|
-| Backend        | Django (Python)                     |
-| Frontend       | TBD                                 |
-| Database       | ?SQLite? (?dev?), PostgreSQL (prod) |
-| Hosting        | TBD                                 |
-| Version Control| Git & GitHub                        |
+| Layer          | Technology                   |
+|----------------|------------------------------|
+| Backend        | Django (Python)              |
+| Frontend       | HTML/CSS, Bootstrap or Tailwind |
+| Database       | SQLite (dev), PostgreSQL (prod optional) |
+| Hosting        | PythonAnywhere or Railway
+| Version Control| Git & GitHub                 |
 
 ---
 
 ## 🧩 6. Data Models (Simplified so TBD)
 
 ### Product
-- Title  
+- id_product (PK) 
 - Description  
+- Name 
 - Price  
-- Image  
-- Stock  
-- Category (FK)  
+- Quantity
+- Price
+- id_category (FK)  
 
 ### Category
-- Name  
-- Slug  
+- id_category  
+- Name
+- Perent_Category (PK)
 
-### User
-- Django default user  
-- Extended with Profile (optional)  
+### Media
+- id_media 
+- Media 
+- alternative_text
+- id_product (FK)
 
-### CartItem
-- User  
-- Product (FK)  
-- Quantity  
+### Order_Item
+- id_order_item
+- id_order (FK) 
+- id_product(FK)
 
 ### Order
-- User  
-- Order items (M2M or related model)  
-- Date ordered  
-- Status  
+- id_order
+- Order_number  
+- Total  
+- Address
+- Creation_date
+- Deliver_date
+- id-status (FK)
+- Customer_phone
+- Customer_email
+
+### User
+- id_user
+- Login
+- First_name
+- Last_name
+- Email
+- Phone
+- Creation_date
+
+### Payment
+- id_payment
+- id_order
+- Provider
+- Ammount
+- Method
+- Status
+- date
+- ?id_password?
+
 
 ---
 
