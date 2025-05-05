@@ -78,7 +78,7 @@ Provide a smooth, user-friendly shopping experience for anime fans, built using 
 ## 🧩 6. Data Models (Simplified so TBD)
 
 ## 📊 Database Schema
-[ERD](https://postimg.cc/LgLHLG2N)
+![ERD](erd.png)
 
 <details>
 <summary>📚 Database Tables Overview</summary>
