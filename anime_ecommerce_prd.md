@@ -2,7 +2,7 @@
 # 📝 Product Requirements Document (PRD)
 
 **Project Name:** Anime E-commerce Store  
-**Authors:** Artur Tymchuk, Dmytro Yarmoluk
+**Authors:** Artur Tymchuk, Dmytro Yarmoliuk
 **Date:** 2025-04-25  
 **Version:** 1.0
 
@@ -57,7 +57,9 @@ Provide a smooth, user-friendly shopping experience for anime fans, built using 
 - Payment gateway integration (Stripe/PayPal)  
 - Product search bar  
 - Wishlist functionality  
+- Creating custom products (with future print-on-demand availability)
 - Discount codes  
+
 
 ---
 
@@ -68,7 +70,7 @@ Provide a smooth, user-friendly shopping experience for anime fans, built using 
 | Backend        | Django (Python)              |
 | Frontend       | HTML/CSS, Bootstrap or Tailwind |
 | Database       | SQLite (dev), PostgreSQL (prod optional) |
-| Hosting        | TBD |
+| Hosting        | PythonAnywhere or Railway
 | Version Control| Git & GitHub                 |
 
 ---
