@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from products.models import Product
 from accounts.models import User
+
+
 # Create your models here.
 class Status(models.Model):
     status_id = models.AutoField(primary_key=True)
@@ -10,8 +12,10 @@ class Status(models.Model):
     class Meta:
         verbose_name = "Status"
         verbose_name_plural = "Statuses"
+
     def __str__(self):
         return "Status: " + self.status
+
 
 class Payment(models.Model):
     payment_id = models.AutoField(primary_key=True)
@@ -26,7 +30,7 @@ class Payment(models.Model):
         verbose_name_plural = "Payments"
 
     def __str__(self):
-        #Note: We can add Payment Number as we did in Order to provide users with human-readable payments invoices
+        # Note: We can add Payment Number as we did in Order to provide users with human-readable payments invoices
         return "Payment " + str(self.date) + "-" + self.provider[:3].capitalize()
 
 
@@ -51,6 +55,7 @@ class Order(models.Model):
 
     def get_absolute_url(self):
         return reverse("order", args=[self.order_number.upper()])
+
 
 class OrderItem(models.Model):
     order_item_id = models.AutoField(primary_key=True)

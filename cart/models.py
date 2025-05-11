@@ -15,6 +15,7 @@ class Cart(models.Model):
     def __str__(self):
         return self.user.username + "`s Cart"
 
+
 class CartItem(models.Model):
     cart_item_id = models.AutoField(primary_key=True)
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)

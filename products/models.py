@@ -1,11 +1,13 @@
 from django.db import models
 from django.urls import reverse
+
+
 # Create your models here.
 
 class Category(models.Model):
     category_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50, unique=True)
-    parent_category = models.ForeignKey('self', on_delete=models.SET(0))
+    parent_category = models.ForeignKey('self', on_delete=models.SET(0), null=True, blank=True)
 
     class Meta:
         verbose_name = "Category"
@@ -16,6 +18,7 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('category', args=[self.name.lower()])
+
 
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
@@ -31,6 +34,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name.capitalize()
+
 
 class Media(models.Model):
     media_id = models.AutoField(primary_key=True)
