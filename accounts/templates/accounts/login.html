@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>Login Form Design | CodeLab</title>
+    <link rel="stylesheet" href="{% static 'css/log_style.css' %}">
 </head>
 <body>
-<form method="POST" action="/accounts/login/">
-    {% csrf_token %} <div class="form-group">
-        <label for="login-username">Login:</label>
-        <input type="text" id="login-username" name="username">
+<div class="wrapper">
+    <div class="title">
+        Login Form
     </div>
-    <div class="form-group">
-        <label for="login-password">Password:</label>
-        <input type="password" id="login-password" name="password">
-    </div>
-    <button type="submit">Login</button>
-</form>
+    <form method='POST' action="">
+        {% csrf_token %}
+        <div class="field">
+            <input type="username" name="username" required>
+            <label>Username</label>
+        </div>
+        <div class="field">
+            <input type="password" name="password" required>
+            <label>Password</label>
+        </div>
+        <div class="content">
+            <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="pass-link">
+                <a href="#">Forgot password?</a>
+            </div>
+        </div>
+
+        {% for massege in messages %}
+        <p id="massages">{{massege}}</p>
+        {% endfor %}
+
+        <div class="field">
+            <input type="submit" value="Login">
+        </div>
+        <div class="signup-link">
+            Not a member? <a href="{% url 'registration' %}">Signup now</a>
+        </div>
+    </form>
+</div>
 </body>
 </html>

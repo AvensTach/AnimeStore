@@ -1,15 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Registration Form </title>
+  <link rel="stylesheet" href="{% static 'css/reg_style.css' %}">
 </head>
 <body>
-<form method="POST" action="/accounts/registration/">
-    {% csrf_token %}
-    {{form.as_p}}
+  <div class="container">
+    <!-- Title section -->
+    <div class="title">Registration</div>
+    <div class="content">
+      <!-- Registration form -->
+      <form method="POST">
+          {% csrf_token %}
+        <div class="user-details">
+          <!-- Input for First Name -->
+          <div class="input-box">
+            <span class="details">First Name</span>
+            {{form.first_name}}
+          </div>
+            <!-- Input for Last Name -->
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            {{form.last_name}}
+          </div>
+          <!-- Input for Username -->
+          <div class="input-box">
+            <span class="details">Username</span>
+            {{form.username}}
+          </div>
+          <!-- Input for Email -->
+          <div class="input-box">
+            <span class="details">Email</span>
+            {{form.email}}
+          </div>
+          <!-- Input for Phone Number -->
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            {{form.phone}}
+          </div>
+          <!-- Input for Password -->
+          <div class="input-box">
+            <span class="details">Password</span>
+            {{form.password1}}
+          </div>
+          <!-- Input for Confirm Password -->
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            {{form.password2}}
+          </div>
+        </div>
 
-    <input type="submit" name="Create user">
-</form>
+        {{form.errors}}
+
+        <!-- Submit button -->
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="login-link">
+               Already have an account? <a href="{% url 'login' %}">Login</a>
+            </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
